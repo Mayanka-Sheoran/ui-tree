@@ -3,11 +3,13 @@
     align-items: center;
     padding-left: 40px;
     cursor: pointer;
+    height: 8vh;
 }
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    display: flex;
   }
    
   li {
@@ -28,4 +30,20 @@ ul {
   li a:hover {
     font-size: 30px;
     background:white;
+  }
+  .bullet-image{
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+  }
+  .transition-div{
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: opacity 1s ease-out;
+  }
+  @media only screen and (max-width: 400px) {
+    li {
+        font: 200 10px/1.5 Helvetica, Verdana, sans-serif;
+    }
   }

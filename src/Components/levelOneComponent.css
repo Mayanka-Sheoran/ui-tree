@@ -2,7 +2,7 @@
     height: 10vh;
     width: 70vw;
     background:#ffffcc;
-    margin: 20px;
+    margin: 15px;
     display: flex;
     align-items: center;
     padding-left: 20px;
@@ -11,3 +11,8 @@
     border: solid #8080804d 1px;
     border-radius: 5px;
 }
+@media only screen and (max-width: 400px) {
+    .container {
+        font: 200 15px/1.5 Helvetica, Verdana, sans-serif;
+    }
+  }
