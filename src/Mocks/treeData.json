@@ -1,0 +1,27 @@
+[{
+    "parentText": "parentText1",
+    "childElements": [
+        {
+            "text": "childText",
+            "link": "wwww.google.com"
+        }
+    ] 
+},
+{
+    "parentText": "parentText2",
+    "childElements": [
+        {
+            "text": "childText",
+            "link": "wwww.google.com"
+        }
+    ] 
+},
+{
+    "parentText": "parentText3",
+    "childElements": [
+        {
+            "text": "childText",
+            "link": "wwww.google.com"
+        }
+    ] 
+}]
