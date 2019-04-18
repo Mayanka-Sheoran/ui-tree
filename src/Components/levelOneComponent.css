@@ -1,5 +1,13 @@
 .container {
-    width: 20vw;
-    height: 20vh;
-    background: white;
+    height: 10vh;
+    width: 70vw;
+    background:#ffffcc;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    cursor: pointer;
+    font: 200 25px/1.5 Helvetica, Verdana, sans-serif;
+    border: solid #8080804d 1px;
+    border-radius: 5px;
 }

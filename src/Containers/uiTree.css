@@ -1,4 +1,8 @@
 .tree-container{
-    background: gold;
+    background: white;
     height: 100vh;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
