@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/Mayanka-Sheoran/ui-tree/precache-manifest.cf99ed35cddc9dc93e788b7658dec07c.js"
+  "/ui-tree/precache-manifest.e752dc5bd64baba2ce7c8ff1a0819689.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/Mayanka-Sheoran/ui-tree/index.html", {
+workbox.routing.registerNavigationRoute("/ui-tree/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
