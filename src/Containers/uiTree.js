@@ -16,30 +16,29 @@ class Tree extends Component {
       this.setState({lessonData: jsonResult.response})
     })
   }
-  fectchChildData = (id)=> () => {
-    if(!this.state[id]){
+  fectchChildData = (id, childrenCount)=> () => {
+    let key = id;
+    let val = !this.state.showChildrenObj[id];
+    let showChildrenObj  = {}
+    showChildrenObj[key] = val;
+    if(!this.state[id] && childrenCount!==0){
       fetch(`http://localhost:3000/api/book/maths/section/${id}`)
       .then((result) => {
         return result.json();
       }).then((jsonResult) => {
         const childDataValues = jsonResult.response;
-        var key = id;
-        var val = !this.state.showChildrenObj[id];
-        var showChildrenObj  = {}
-        showChildrenObj[key] = val
         this.setState({[id]: childDataValues[Object.keys(childDataValues)[0]], showChildrenObj: showChildrenObj})
       })
-    } else {
-      var key = id;
-      var val = !this.state.showChildrenObj[id];
-      var showChildrenObj  = {}
-      showChildrenObj[key] = val;
+    } else if(childrenCount!==0){
       this.setState({showChildrenObj: showChildrenObj});
+    } else {
+      return;
     }
   }
   render() {
     const treeElements = this.state.lessonData.map(function(item, index){
-        return <LevelOneTree key={index} text={item.title} onClick={this.fectchChildData(item.id)} childData={this.state[item.id]|| []} showChildren={this.state.showChildrenObj[item.id]}/>
+         const progress = item.childrenCount!==0 ? Math.round((item.completeCount/item.childrenCount)*100): undefined;
+        return <LevelOneTree key={index} text={item.title} progress={progress} onClick={this.fectchChildData(item.id, item.childrenCount)} childData={this.state[item.id]|| []} showChildren={this.state.showChildrenObj[item.id]}/>
       }, this) 
     return (
       <div className="tree-container">

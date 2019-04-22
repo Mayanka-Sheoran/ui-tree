@@ -1,5 +1,5 @@
 .container {
-    height: 10vh;
+    height: 7vh;
     width: 70vw;
     background:#ffffcc;
     margin: 15px;
@@ -10,6 +10,12 @@
     font: 200 25px/1.5 Helvetica, Verdana, sans-serif;
     border: solid #8080804d 1px;
     border-radius: 5px;
+    justify-content: space-between;
+}
+.progress{
+    font: 600 15px/1.5 Helvetica, Verdana, sans-serif; 
+    color: grey;
+    margin-right: 20px;
 }
 @media only screen and (max-width: 400px) {
     .container {
