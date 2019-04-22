@@ -38,11 +38,13 @@ class Tree extends Component {
   render() {
     const treeElements = this.state.lessonData.map(function(item, index){
          const progress = item.childrenCount!==0 ? Math.round((item.completeCount/item.childrenCount)*100): undefined;
-        return <LevelOneTree key={index} text={item.title} progress={progress} onClick={this.fectchChildData(item.id, item.childrenCount)} childData={this.state[item.id]|| []} showChildren={this.state.showChildrenObj[item.id]}/>
+        return <LevelOneTree key={index} text={item.title} progress={progress} 
+        onClick={this.fectchChildData(item.id, item.childrenCount)} 
+        childData={this.state[item.id]|| []} showChildren={this.state.showChildrenObj[item.id]} childrenCount={item.childrenCount}/>
       }, this) 
     return (
       <div className="tree-container">
-      <div className='page-heading'>A sample UI Tree</div>
+      <div className='page-heading'>Maths</div>
         {treeElements}
       </div>
     );

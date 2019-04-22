@@ -7,7 +7,7 @@
     align-items: center;
     padding-left: 20px;
     cursor: pointer;
-    font: 200 25px/1.5 Helvetica, Verdana, sans-serif;
+    font: 400 20px/1.5 Helvetica, Verdana, sans-serif;
     border: solid #8080804d 1px;
     border-radius: 5px;
     justify-content: space-between;
@@ -16,6 +16,11 @@
     font: 600 15px/1.5 Helvetica, Verdana, sans-serif; 
     color: grey;
     margin-right: 20px;
+}
+.concepts {
+    font: 600 15px/1.5 Helvetica, Verdana, sans-serif; 
+    color: grey;
+    margin-right: 10px;
 }
 @media only screen and (max-width: 400px) {
     .container {

@@ -4,6 +4,7 @@ This project is a UI tree data driven component with two levels and external lin
 
 In the project directory, you can run:
 
+### `npm install`
 ### `npm start`
 
 Runs the app in the development mode.<br>
