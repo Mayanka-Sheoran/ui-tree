@@ -3,18 +3,13 @@ import './levelOneComponent.css';
 import LevelTwoTree from './levelTwoComponent';
 
 class LevelOneTree extends Component {
-  state ={
-      showChildren: false
-  }  
-  show = () => {
-      this.setState({showChildren: !this.state.showChildren})
-  }
   render() {
+    console.log(this.props.childData);
     return (
-      <div><div className="container" onClick={this.show}>
+      <div><div className="container" onClick={this.props.onClick}>
          {this.props.text}
       </div>
-    {this.state.showChildren && <LevelTwoTree childData={this.props.childData}/>}</div>
+    {this.props.showChildren && <LevelTwoTree childData={this.props.childData}/>}</div>
     );
   }
 }
