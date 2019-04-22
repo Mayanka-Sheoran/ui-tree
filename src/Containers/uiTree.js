@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './uiTree.css';
 import LevelOneTree from '../Components/levelOneTreeComponent';
+import apiEndpoints from '../apiEndpoints.json';
 
 class Tree extends Component {
   state = {
@@ -9,7 +10,7 @@ class Tree extends Component {
     showChildrenObj: {}
   }
   componentDidMount = () => {
-    fetch('http://localhost:3000/api/book/maths/')
+    fetch(apiEndpoints.book)
     .then((result) => {
       return result.json();
     }).then((jsonResult) => {
@@ -22,7 +23,7 @@ class Tree extends Component {
     let showChildrenObj  = {}
     showChildrenObj[key] = val;
     if(!this.state[id] && childrenCount!==0){
-      fetch(`http://localhost:3000/api/book/maths/section/${id}`)
+      fetch(`${apiEndpoints.book}section/${id}`)
       .then((result) => {
         return result.json();
       }).then((jsonResult) => {
