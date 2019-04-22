@@ -1,7 +1,7 @@
 .container {
     height: 7vh;
     width: 70vw;
-    background:#ffffcc;
+    background: #cce9ff;
     margin: 15px;
     display: flex;
     align-items: center;
@@ -11,6 +11,15 @@
     border: solid #8080804d 1px;
     border-radius: 5px;
     justify-content: space-between;
+}
+.container:hover{
+    background: #2b96e8;
+}
+.container:hover .progress  {
+    color: white;
+}
+.container:hover .concepts  {
+    color: white;
 }
 .progress{
     font: 600 15px/1.5 Helvetica, Verdana, sans-serif; 
